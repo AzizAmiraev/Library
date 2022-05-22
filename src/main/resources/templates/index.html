@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>HTTP Status 401 – Unauthorized</title>
+    <style type="text/css">
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        b {
+            color: white;
+            background-color: #525D76;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        h3 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        a {
+            color: black;
+        }
+
+        .line {
+            height: 1px;
+            background-color: #525D76;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+<h1>HTTP Status 401 – Unauthorized</h1>
+<hr class="line" />
+<p><b>Type</b> Exception Report</p>
+<p><b>Message</b> JWT token is expired or invalid</p>
+<p><b>Description</b> The request has not been applied because it lacks valid authentication credentials for the
+    target resource.</p>
+<p><b>Exception</b></p>
+<pre>com.example.librarydemo.exceptions.JwtAuthenticationException: JWT token is expired or invalid
+	com.example.librarydemo.security.JwtTokenFilter.doFilter(JwtTokenFilter.java:41)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+</pre>
+<p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p>
+<hr class="line" />
+<h3>Apache Tomcat/9.0.60</h3>
+</body>
+
+</html>
